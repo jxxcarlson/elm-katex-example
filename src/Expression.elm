@@ -1,6 +1,7 @@
 module Expression exposing (Expr(..), exprListParser, parse, render, compile)
 
 import Html exposing (Html)
+import Html.Attributes
 import MathJax
 import Parser exposing ((|.), (|=), Parser)
 
@@ -18,7 +19,7 @@ compile str =
             Html.text "Oops, parse error"
 
         Just exprList ->
-            Html.div [] (List.map render exprList)
+            Html.p [] (List.map render exprList)
 
 
 render : Expr -> Html msg
@@ -31,7 +32,7 @@ render expr =
             MathJax.inline str
 
         DisplayMath str ->
-            MathJax.display 500 str
+            MathJax.display str
 
 
 {-|

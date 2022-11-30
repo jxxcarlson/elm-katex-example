@@ -5,6 +5,7 @@ import Browser
 import Data
 import Html exposing (Html)
 import Expression
+import Html.Attributes
 
 main =
     Browser.element
@@ -57,5 +58,6 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    Expression.compile model.sourceText
+    Html.p []
+      [Expression.compile model.sourceText]
 

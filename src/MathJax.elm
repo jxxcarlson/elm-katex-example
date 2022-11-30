@@ -10,9 +10,9 @@ type DisplayMode
     | DisplayMathMode
 
 
-display : Int -> String -> Html msg
-display width str =
-    Html.div [ HA.width width ]
+display :String -> Html msg
+display str =
+    Html.div [  ]
         [ mathText DisplayMathMode str ]
 
 
