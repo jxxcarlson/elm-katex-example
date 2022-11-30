@@ -1,7 +1,7 @@
-# Bare-bones Elm-MathJax Example
+# Bare-bones Elm-KaTeX Example
 
 
-This is a bare-bones example of how to use MathJax in Elm. To run it, do `sh make.sh`, then open
+This is a bare-bones example of how to use KaTeX in Elm. To run it, do `sh make.sh`, then open
 `assets/index.html` in a browser.   The `sh make.sh` command compiles `./src/Main.elm` to `./main.js`
 which is referenced by `./assets/index.html`.
 
@@ -34,7 +34,7 @@ compile : String -> Html msg
 ```
 
 
-## Module MathJax
+## Module KaTeX
 
 The `render` function calls on the module `MathJax` to render inline and displayed mathematical
 text via the functions

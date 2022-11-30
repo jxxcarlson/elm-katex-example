@@ -1,4 +1,4 @@
-module MathJax exposing (display, inline)
+module KaTeX exposing (display, inline)
 
 import Html exposing (Html)
 import Html.Attributes as HA
