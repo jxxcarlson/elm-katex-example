@@ -1,4 +1,4 @@
-module Expression exposing (Expr(..), exprListParser, parse)
+module Expression exposing (Expr(..), exprListParser, parse, render, compile)
 
 import Html exposing (Html)
 import MathJax
@@ -9,6 +9,16 @@ type Expr
     = Text String
     | InlineMath String
     | DisplayMath String
+
+
+compile : String -> Html msg
+compile str =
+    case parse str of
+        Nothing ->
+            Html.text "Oops, parse error"
+
+        Just exprList ->
+            Html.div [] (List.map render exprList)
 
 
 render : Expr -> Html msg
